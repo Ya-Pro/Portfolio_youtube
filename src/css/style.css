@@ -1,0 +1,557 @@
+@import url(https://fonts.googleapis.com/css?family=Reem+Kufi:regular,500,600,700);
+:root {
+  --white: rgb(255, 255, 255);
+  --silver: silver;
+  --black: black;
+  --content-bg: rgb(240, 238, 252);
+  --main-color: rgb(105, 83, 215);
+  --btn-bg: rgb(108, 85, 224);
+  --link-headings: rgb(17, 32, 77);
+  --sm-padding-margin: 0.5rem;
+  --lg-padding-margin: 1rem;
+  --transition: all 0.3s cubic-bezier(0.2, 0.51, 0.8, 0.9);
+  --cards-shadow: 0 0 0.4rem 0.1rem rgb(248, 248, 248);
+  --box-shadow: 0 0 0.4rem 0.1rem rgb(217, 217, 217);
+  --btn-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgb(234, 223, 255);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
+  font-family: "Reem Kufi", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  background-color: var(--white);
+  min-height: 100vh;
+}
+html {
+  font-size: 20px;
+}
+/* the general styles */
+h1 {
+  font-size: 3rem;
+}
+p {
+  font-size: 0.8rem;
+}
+.btn {
+  padding: var(--sm-padding-margin) var(--lg-padding-margin);
+  color: var(--white);
+  background-color: transparent;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: relative;
+  border: 0.04rem solid var(--btn-bg);
+  box-shadow: var(--btn-shadow);
+  transition: var(--transition);
+}
+.btn::before,
+.btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--btn-bg);
+  transition: var(--transition);
+  z-index: -1;
+}
+.btn::after {
+  width: 0;
+  background-color: var(--black);
+}
+.btn:hover {
+  color: var(--white);
+  box-shadow: 0 0 0.6rem 0.1rem rgb(166, 166, 166);
+  border-color: transparent;
+}
+.btn:hover::after {
+  width: 100%;
+}
+h1,
+h2,
+h5,
+h6 {
+  color: var(--link-headings);
+  font-weight: bold;
+}
+h3 {
+  color: var(--main-color);
+}
+h4 {
+  color: rgb(143, 143, 143);
+}
+img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+h2.title {
+  position: relative;
+  font-size: 2rem;
+}
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  width: 3rem;
+  height: 100%;
+  background-color: var(--content-bg);
+  z-index: -1;
+  border-radius: 50%;
+  top: 0;
+  left: 40%;
+}
+.title::after {
+  z-index: 1;
+  width: 10%;
+  height: 1rem;
+  border-radius: 0;
+  background-color: var(--btn-bg);
+  top: 0;
+  left: 60%;
+}
+/* the main styles */
+header {
+  padding: 0 8%;
+  width: 100%;
+  display: flex;
+  height: 5rem;
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0.1rem 0.4rem rgb(234, 230, 255);
+  z-index: 9999;
+}
+header h2 {
+  color: var(--main-color);
+  font-size: 2.3rem;
+}
+header h2 span {
+  color: var(--black);
+  position: relative;
+}
+header h2 span::before {
+  position: absolute;
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--main-color);
+  left: 82%;
+  top: 54%;
+  border-radius: 50%;
+}
+nav a {
+  color: var(--link);
+  margin: 0 0.5rem;
+  position: relative;
+}
+nav a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 0.07rem;
+  background-color: var(--btn-bg);
+  transition: var(--transition);
+}
+nav a:hover::before {
+  width: 100%;
+}
+main {
+  padding: 5rem 8%;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  background-color: var(--content-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content h3,
+h1,
+h4 {
+  margin: 0.5rem 0;
+}
+.btns {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.btns a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* the styles of the image */
+.main-image {
+  display: flex;
+  justify-content: end;
+}
+.main-image img {
+  width: 20rem;
+  background-color: var(--btn-bg);
+  padding-top: 2rem;
+  border-radius: 80% 80% 50% 50%/70% 70% 70% 70%;
+  animation: image 4s cubic-bezier(0.175, 0.385, 0.52, 0.7) infinite;
+}
+@keyframes image {
+  0%,
+  100% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+}
+/*======================== the styles of the about section=============== */
+.about {
+  padding: 5rem 8%;
+  text-align: center;
+}
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+.about-content {
+  padding-top: 2rem;
+  text-align: left;
+  width: 50%;
+}
+.about-content strong {
+  display: inline-block;
+  margin: 2rem 0 1rem;
+}
+
+.boxs {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.boxs .box {
+  background-color: var(--content-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.05rem dashed var(--link-headings);
+  text-align: center;
+}
+/* ================================================================
+the styles of the services container */
+.services {
+  text-align: center;
+  padding: 0 8%;
+}
+.services-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.service-card {
+  background-color: transparent;
+  border: 0.05rem solid rgb(233, 233, 233);
+  padding: 3rem 0.5rem 1rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.service-card .count,
+.service-card i,
+.service-card h2 {
+  margin-top: 0.8rem;
+}
+.service-card p {
+  font-size: 0.8rem;
+}
+.service-card .count {
+  right: 0.5rem;
+  top: 0;
+  color: var(--main-color);
+  position: absolute;
+  transition: var(--transition);
+}
+.service-card::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgb(240, 238, 252);
+  transition: var(--transition);
+  z-index: -1;
+}
+.service-card:hover::before {
+  height: 100vh;
+}
+.service-card:hover .count {
+  font-size: 2rem;
+}
+/* ================================================================
+the styles of the Portfolio container */
+.portfolio {
+  text-align: center;
+  padding: 3rem 8%;
+}
+.portfolio-cards {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.portfolio-card {
+  width: 100%;
+  height: 20rem;
+  border: 0.05rem solid rgb(233, 233, 233);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-image {
+  position: absolute;
+  height: 100%;
+}
+.portfolio-image img {
+  height: 100%;
+}
+.portfolio-card h3 {
+  position: absolute;
+  left: 0.5rem;
+  top: -10rem;
+  font-size: 1.3rem;
+  transition: var(--transition);
+  margin: unset;
+}
+.portfolio-card:hover h3 {
+  top: 0;
+}
+.portfolio-card a {
+  position: absolute;
+  bottom: 0;
+  left: -10rem;
+  opacity: 0;
+  z-index: 2;
+  box-shadow: none;
+  transition: var(--transition);
+  margin: unset;
+}
+.portfolio-card:hover a {
+  opacity: 1;
+  left: 0rem;
+}
+/* ================================================================
+the styles of the contact container */
+.contact {
+  padding: 2rem 8% 6rem;
+  text-align: center;
+  background-color: var(--content-bg);
+}
+.contact-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-content: center;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.contact-info input {
+  height: 3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 0.08rem solid rgb(237, 235, 255);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+input[type="submit"] {
+  background-color: var(--btn-bg);
+  color: var(--white);
+  transition: var(--transition);
+}
+input[type="submit"]:hover {
+  background-color: var(--link-headings);
+}
+textarea {
+  resize: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: 0.08rem solid rgb(237, 235, 255);
+  border-radius: 0.5rem;
+}
+.myself {
+  height: fit-content;
+  background-color: var(--white);
+  padding: 1rem 0.5rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+}
+.myself h3,
+p,
+a {
+  margin: 1rem 0;
+}
+.myself a {
+  color: var(--black);
+  padding-left: 1rem;
+}
+.myself a {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+/* the footer section */
+footer {
+  display: flex;
+  padding: 1rem 8%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--link-headings);
+  color: var(--white);
+}
+.social {
+  display: flex;
+  gap: 0.5rem;
+}
+.social a {
+  color: inherit;
+  font-size: 1.3rem;
+  transition: var(--transition);
+}
+.social a:hover {
+  transform: translateY(-0.5rem);
+  cursor: pointer;
+}
+footer p {
+  font-size: 1.2rem;
+}
+/* the hamburger icon */
+.hamburger {
+  font-size: 2rem;
+  color: var(--btn-bg);
+  cursor: pointer;
+  display: none;
+}
+/* medium devices*/
+@media screen and (max-width: 1024px) {
+  nav {
+    top: 0;
+    left: -100%;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    top: 5rem;
+    z-index: 99;
+    transition: var(--transition);
+  }
+  nav a {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .hamburger {
+    display: block;
+  }
+  nav.active_nav {
+    left: 0;
+  }
+  /* the main styles */
+  main,
+  .about-container,
+  .services-cards,
+  .portfolio-cards,
+  .contact-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+  .about-content {
+    width: 100%;
+  }
+  main {
+    height: fit-content;
+    padding-top: 5rem;
+  }
+  main img {
+    display: none;
+  }
+}
+/* small devices*/
+@media screen and (max-width: 600px) {
+  nav {
+    top: 0;
+    left: -100%;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    top: 5rem;
+    z-index: 999;
+    transition: var(--transition);
+    background-color: var(--white);
+  }
+  nav a {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .hamburger {
+    display: block;
+  }
+  nav.active_nav {
+    left: 0;
+  }
+  .btns {
+    flex-direction: column;
+  }
+  /* the main styles */
+  main,
+  .about-container,
+  .services-cards,
+  .portfolio-cards,
+  .contact-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+  .about-content {
+    width: 100%;
+  }
+  main {
+    height: fit-content;
+    padding-top: 5rem;
+  }
+  main img {
+    display: none;
+  }
+  .main-image {
+    width: 15rem;
+    justify-content: center;
+  }
+  .main-image img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is Sharif's Portfolio in which you can find any thing you want"
+    />
+    <meta name="keywords" content="sharif,portfolio,love,aya" />
+    <title>Portfolio</title>
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <!-- the aos library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- the css styles -->
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <!-- the home page -->
+    <section class="home">
+      <header class="padding">
+        <h2>UPort <span> folio</span></h2>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact" class="btn">Contact Now</a>
+        </nav>
+        <i class="fa-solid fa-bars-staggered hamburger"></i>
+      </header>
+      <main>
+        <div class="main-content" data-aos="fade-up" data-aos-duration="500">
+          <h3>Hi There, I'm</h3>
+          <h1>Sharif Atallah</h1>
+          <h4>Junior Web Developer & Video Editor</h4>
+          <div class="btns">
+            <a href="#portfolio" class="btn"
+              >View My Works <i class="fa-regular fa-eye"></i></a
+            ><a href="#contact"
+              >Contact Me <i class="fa-solid fa-angle-down"></i
+            ></a>
+          </div>
+        </div>
+        <div class="main-image" data-aos="fade-left" data-aos-duration="500">
+          <img src="assets/images/SharifTarek.png" alt="Sharif-Tarek" />
+        </div>
+      </main>
+    </section>
+    <!-- about me section -->
+    <section class="about" id="about">        
+      <h2 class="title">About Me</h2>
+         <div class="about-container">
+            <div class="main-image" data-aos="fade-up" >
+                 <img src="assets/images/SharifTarek.png" alt="person-image" />
+            </div>
+         <div class="about-content" data-aos="fade-up" >     
+         <h3 >Sharif Atallah</h3>
+
+        <span>A Junior Web Dev</span>
+        <strong>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout.
+        </strong>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores id
+          atque tempore est! Commodi rerum quasi enim, labore nesciunt
+          molestias.
+        </p>
+        <div class="boxs">
+          <div class="box">
+            <h2>25</h2>
+            <p>Completed Projects</p>
+          </div>
+          <div class="box">
+            <h2>5</h2>
+            <p>Positive Reviews</p>
+          </div>
+        </div>
+      </div>
+</div>
+      
+    </section>
+    <!-- the services section -->
+    <section class="services" id="services">
+      <h2 class="title">My Services</h2>
+      <h4>The beautiful things you can figure them out.</h4>
+      <div class="services-cards" >
+        <div class="service-card"data-aos="fade-up" data-aos-duration="500">
+          <div class="count">01</div>
+          <i class="fa-regular fa-star"></i>
+          <h2>Photo Editor</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+            expedita harum corrupti minima
+          </p>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-duration="1000">
+          <div class="count">02</div>
+          <i class="fa-regular fa-star"></i>
+          <h2>Graphic Designer</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+            expedita harum corrupti minima
+          </p>
+        </div>
+        <div class="service-card"   data-aos="fade-up"  data-aos-duration="1500">
+          <div class="count">03</div>
+          <i class="fa-regular fa-star"></i>
+          <h2>Web Developer</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
+            expedita harum corrupti minima
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- the portfolio section -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="title">My Portfolio</h2>
+      <div class="portfolio-cards">
+        <div class="portfolio-card" data-aos="fade-up"  data-aos-duration="500">
+          <div class="portfolio-image">
+            <img src="assets/images/Server-amico.png" alt="pure-soft" />
+          </div>
+          <h3>Pure Soft</h3>
+          <a href="#" class="btn">Take A Look</a>
+        </div>
+        <div class="portfolio-card" data-aos="fade-up"  data-aos-duration="1000">
+          <div class="portfolio-image">
+            <img src="assets/images/Server-amico.png" alt="pure-soft" />
+          </div>
+          <h3>Pure Soft</h3>
+          <a href="#" class="btn">Take A Look </a>
+        </div>
+        <div class="portfolio-card" data-aos="fade-up"  data-aos-duration="1500">
+          <div class="portfolio-image">
+            <img src="assets/images/Server-amico.png" alt="pure-soft" />
+          </div>
+          <h3>Pure Soft</h3>
+          <a href="#" class="btn">Take A Look</a>
+        </div>
+      </div>
+    </section>
+    <!-- the contact me section -->
+    <section class="contact" id="contact">
+      <h2 class="title">Contact</h2>
+      <!-- the container of the contact information -->
+          <div class="contact-container">
+
+            <div class="contact-info" data-aos="fade-up"  data-aos-duration="1500">
+              <form >
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required >
+                <textarea name="message" id="message"  rows="5" placeholder="Message"></textarea>
+                <input type="submit" value="Contact" >
+              </form>
+            </div>
+             <div class="myself" data-aos="fade-up"  data-aos-duration="1500">
+            <h3>
+              What’s your story?<br />
+              Get in touch
+            </h3>
+            <p> Always available for freelancing if the right project comes
+            along, Feel free to contact me.
+            </p>
+          <a class="location"
+            ><i class="fa-solid fa-location-dot"></i><span> El Bagour Al Menofia</span></a
+          >
+
+          <a href="mailto:sharif@gmail.com"
+            ><i class="fa-solid fa-envelope"></i><span> sharif@gmail.com</span></a
+          >
+
+          <a href="tel:+201012227045"
+            ><i class="fa-solid fa-mobile-screen"></i><span>+201012227045</span> </a
+          >
+        </div>
+          </div>
+          <!-- myself information -->
+      </div>
+    </section>
+    <!-- the footer element -->
+    <footer>
+      <div class="social">
+       <a href="https://facebook.com" class="fa-brands fa-facebook"></a>
+       <a href="https://twitter.com" class="fa-brands fa-twitter"></a>
+       <a href="https://linkedin.com" class="fa-brands fa-linkedin"></a>
+       <a href="https://pinterest.com" class="fa-brands fa-pinterest"></a>
+      </div>
+      <p>Copyright &#169; 2023 Shairf Atallah. All Rights Reserved.</p>
+    </footer>
+    <!-- the aos library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  let icon = document.querySelector(" header .hamburger")
+  let nav = document.querySelector("nav")
+  icon.addEventListener("click",()=>{
+    nav.classList.toggle("active_nav")
+  })
+  let links = document.querySelectorAll("nav a")
+    links.forEach(link=> {
+      link.addEventListener('click',()=>{
+            nav.classList.remove("active_nav")
+
+      })
+    })
+  AOS.init();
+</script>
+  </body>
+</html>
